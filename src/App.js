@@ -1,13 +1,13 @@
-import "./App.css";
-import Header from "./components/Header";
-import Tasks from "./components/Tasks";
+import { Route, Routes } from "react-router-dom";
+import HomePage from "./Pages/HomePage";
+import TasksPage from "./Pages/TasksPage";
 
 function App() {
   return (
-    <main className="app">
-      <Header />
-      <Tasks />
-    </main>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="tasks" element={<TasksPage />} />
+    </Routes>
   );
 }
 

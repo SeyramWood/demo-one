@@ -3,7 +3,10 @@ import React from "react";
 const Header = () => {
   return (
     <header className="header">
-      <span>{`<<CodeCoast>> `}</span>Task Manager
+      <a href="/">
+        <span>{`<Daily/> `}</span>
+        <span>Planner</span>
+      </a>
     </header>
   );
 };

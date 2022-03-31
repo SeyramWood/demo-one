@@ -14,3 +14,45 @@ body {
   height: 100vh;
   background-color: antiquewhite;
 }
+.home {
+  width: 100%;
+  height: 100%;
+ background-image: linear-gradient(rgba(0,0,0, .5),rgba(0,0,0, .5)), url('/public/bg.jpg');
+ background-position: bottom center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+.home > .cta{
+  color: whitesmoke;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.home > .cta > h1{
+  font-size: 5rem;
+  line-height: 0;
+}
+.home > .cta > p{
+  font-size: 2rem;
+}
+
+.home>a{
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  background: aquamarine;
+  color: #282c34;
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1.2px;
+  border-radius: 9999px;
+  transition: all .3s ease-in-out;
+}
+.home>a:hover{
+  background: aqua;
+  transform: scale(1.1);
+}

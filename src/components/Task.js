@@ -9,7 +9,6 @@ const Task = ({ task, deleteTask, updateTask, markCompletedTask }) => {
     setState(value);
     markCompletedTask(task.id, value);
   };
-  React.useEffect(() => {}, [state]);
   return (
     <div className="task">
       <div className="item">
@@ -21,7 +20,17 @@ const Task = ({ task, deleteTask, updateTask, markCompletedTask }) => {
             checked={state}
             onChange={handleInputChange}
           />
-          <label htmlFor={task.id}>{task.task}</label>
+          <label htmlFor={task.id}>
+            <span>{task.task}</span>{" "}
+            <span>
+              {new Date(task.createdAt)
+                .toISOString()
+                .slice(0, 10)
+                .split("-")
+                .reverse()
+                .join("/")}
+            </span>
+          </label>
         </span>
       </div>
       <div className="buttons">
